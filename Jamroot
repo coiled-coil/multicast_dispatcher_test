@@ -1,0 +1,9 @@
+import testing ;
+import os ;
+
+project : requirements <include>include ;
+
+use-project /boost : [ os.environ BOOST_ROOT ] ;
+
+# run static_log_event_parser.cpp ;
+run test_multicast_messenger.cpp /boost/test//boost_unit_test_framework/<link>static ;
